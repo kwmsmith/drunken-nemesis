@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>App</title>
+  <link rel="stylesheet" href="/application.css" type="text/css" charset="utf-8">
+  <script src="/application.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    var jQuery  = require("jqueryify");
+    var exports = this;
+    jQuery(function(){
+      var App = require("index");
+      exports.app = new App({el: $("body")});      
+    });
+  </script>
+  <style type="text/css">
+    body {
+      bacground: black;
+      width: 100%; 
+      height: 100%; 
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      width: 400px; 
+      height: 400px; 
+      margin: 20px auto;
+      padding: 10px;
+      border: 3px solid black;
+    }
+
+  .fetch_data {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  #the_canvas {
+      width: 100%; 
+      height: 100%; 
+      background: rgba(166, 191, 221, 1.0);
+    }
+
+  </style>
+  
+</head>
+<body>
+  <div class="content">
+    <canvas id="the_canvas">
+    </canvas>
+    <button class="fetch_data">
+      Fetch
+    </button>
+  </div>
+</body>
+</html>
